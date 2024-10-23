@@ -1,0 +1,122 @@
+// Atividade 1 
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+
+    static List<int> Fibonacci(int n)
+    {
+        List<int> fibSeq = new List<int> { 0, 1 }; // Início da sequência
+
+        while (fibSeq[fibSeq.Count - 1] < n)
+        {
+            int nextFib = fibSeq[fibSeq.Count - 1] + fibSeq[fibSeq.Count - 2];
+            fibSeq.Add(nextFib);
+        }
+
+        return fibSeq;
+    }
+
+
+    static void ChecaFibonacci(int num)
+    {
+        List<int> fibSeq = Fibonacci(num);
+
+        if (fibSeq.Contains(num))
+        {
+            Console.WriteLine($"O número {num} pertence à sequência de Fibonacci.");
+        }
+        else
+        {
+            Console.WriteLine($"O número {num} **não** pertence à sequência de Fibonacci.");
+        }
+    }
+
+    static void Main(string[] args)
+    {
+
+        Console.Write("Informe um número para verificar: ");
+        int numero = int.Parse(Console.ReadLine());
+
+   
+        ChecaFibonacci(numero);
+    }
+}
+
+// Atividade 2 
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        
+        Console.WriteLine("Digite um texto para verificar:");
+        string texto = Console.ReadLine();
+
+        
+        string textoLower = texto.ToLower();
+
+        
+        int contadorA = 0;
+
+      
+        foreach (char c in textoLower)
+        {
+            if (c == 'a')
+            {
+                contadorA++;
+            }
+        }
+
+      
+        if (contadorA > 0)
+        {
+            Console.WriteLine($"A letra 'a' aparece {contadorA} vezes.");
+        }
+        else
+        {
+            Console.WriteLine("A letra 'a' não está presente no texto.");
+        }
+    }
+}
+
+// Atividade 3 
+
+
+77 
+
+// Atividade 4 
+
+a) 9
+b) 128 
+c) 49 
+d) 94 
+e) 13
+f) 20 
+
+// Atividade 5 
+
+Passos:
+Rotule os interruptores: Chame os três interruptores de A, B e C.
+
+Primeiro passo (ligar e aguardar):
+
+Ligue o interruptor A e deixe-o ligado por alguns minutos (vamos supor por 5 minutos).
+Após esse tempo, desligue o interruptor A e ligue o interruptor B.
+Deixe o interruptor C desligado o tempo todo.
+Primeira ida até a sala das lâmpadas:
+
+Agora, vá até a sala das lâmpadas.
+Observe as três lâmpadas:
+A lâmpada que está acesa está conectada ao interruptor B, já que você o deixou ligado antes de ir.
+Toque nas lâmpadas apagadas:
+A lâmpada que está quente, mas apagada, está conectada ao interruptor A, porque ela estava ligada por algum tempo antes de você desligá-la.
+A lâmpada que está fria está conectada ao interruptor C, pois nunca foi ligada.
+
+
+
+
